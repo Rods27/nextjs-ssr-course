@@ -3,7 +3,16 @@ import classes from './page.module.css';
 import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
 
-const Meal = async ({ params }: { params: Promise<{ meal: string }> }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ meal: string }> }) => {
+  const meal = await getMeal((await params).meal);
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+};
+
+export default async function Meal({ params }: { params: Promise<{ meal: string }> }) {
   const { meal } = await params;
   const mealData = await getMeal(meal);
 
@@ -37,6 +46,4 @@ const Meal = async ({ params }: { params: Promise<{ meal: string }> }) => {
       </main>
     </>
   );
-};
-
-export default Meal;
+}
