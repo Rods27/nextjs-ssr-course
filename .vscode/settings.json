@@ -1,0 +1,46 @@
+{
+  "debug.showBreakpointsInOverviewRuler": true,
+  // Configura tamanho e família da fonte
+  // "editor.fontSize": 12,
+  // "editor.lineHeight": 24,
+  // "editor.fontFamily": "Fira Code",
+  "files.eol": "\n",
+  "editor.minimap.scale": 2,
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+
+  // Aplica linhas verticais para lembrar de quebrar linha em códigos muito grandes
+  "editor.rulers": [80, 120],
+
+  // Configurações necessárias para funcionamento dos plugins
+  "html.validate.scripts": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+
+  // Aplica um sinal visual na esquerda da linha selecionada
+  "editor.renderLineHighlight": "gutter",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[css][javascript][javascriptreact][scss][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit",
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "eslint.experimental.useFlatConfig": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "stylelint.validate": ["css", "scss", "typescript", "typescriptreact", "javascript", "javascriptreact"],
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "breadcrumbs.enabled": true,
+  "git.enableSmartCommit": true,
+  "editor.parameterHints.enabled": false
+}
